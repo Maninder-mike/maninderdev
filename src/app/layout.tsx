@@ -15,8 +15,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Maninder Dev",
+  metadataBase:
+    process.env.NEXT_PUBLIC_SITE_URL
+      ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
+      : undefined,
+  title: {
+    default: "Maninder Dev",
+    template: "%s | Maninder Dev",
+  },
   description: "Personal site built with Next.js",
+  openGraph: {
+    type: "website",
+    siteName: "Maninder Dev",
+    url: process.env.NEXT_PUBLIC_SITE_URL,
+    images: "/opengraph-image",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@maninderdev",
+    creator: "@maninderdev",
+    images: "/twitter-image",
+  },
 };
 
 export const viewport: Viewport = {

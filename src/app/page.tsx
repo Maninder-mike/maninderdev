@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home | Maninder Dev",
+  description: "Welcome to Maninder Dev",
+};
 
 export default function Home() {
   return (

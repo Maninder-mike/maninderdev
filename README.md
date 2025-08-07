@@ -34,3 +34,23 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Environment
+
+Create a `.env.local` based on `.env.local.example`:
+
+```bash
+cp .env.local.example .env.local
+# set your public URL (no trailing slash)
+NEXT_PUBLIC_SITE_URL=https://your-domain.com
+```
+
+This is used for `metadataBase`, Open Graph/Twitter images, `robots.txt`, and `sitemap.xml`.
+
+## SEO & Social
+- Open Graph image: `/opengraph-image`
+- Twitter image: `/twitter-image`
+- Robots: `/robots.txt`
+- Sitemap: `/sitemap.xml`
+
+Update `src/app/layout.tsx` metadata if your social handles or site name change.

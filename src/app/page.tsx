@@ -1,8 +1,8 @@
 
 export default function Home() {
   return (
-    <div>
-      <h1>Home Page</h1>
-    </div>
+    <main className="container mx-auto p-6">
+      <h1 className="text-2xl font-semibold">Home Page</h1>
+    </main>
   );
 }
